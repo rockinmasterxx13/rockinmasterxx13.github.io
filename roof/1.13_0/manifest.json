@@ -1,0 +1,32 @@
+{
+   "action": {
+      "default_icon": "images/48.png",
+      "default_title": "__MSG_name__"
+   },
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "js/content.bundle.js" ],
+      "matches": [ "https://*/*" ]
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+   },
+   "default_locale": "en_US",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "images/128.png",
+      "48": "images/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA00yKW8INPp4/ErVlNwV2fnkLb0SKeSYNwmoF2kXwcKRBw7vXsJr//7xCzAgzRiuEDEegWo32o0lOBOZ9bzeNZbiluNm3oznCe23+9fWxBqxE9wHn/IRA9kFMgKKNDfrqYnZvczVcfPNO+r7JvRUnt7XsQz/QX0HupS9j+xiWZjtAnnEfCiv4Sl4XgI41cuqV/91+7EEWCoVKP89HhOCy3K+smdf6ZO4ncHhj7xHYHbuwRNGBI2cpbt9QD1wYv4UH/TZ8qRCmiCiTqfrefNnRD5XoZfHtyr6S3juzfZl4Sq5/NekyQlEJzt4UQry+2lIwkKjA8z2QeYCePyBMSCakHwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_name__",
+   "permissions": [ "storage", "unlimitedStorage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.13",
+   "web_accessible_resources": [ {
+      "matches": [ "*://*/*" ],
+      "resources": [ "js/*", "images/*" ]
+   } ]
+}
